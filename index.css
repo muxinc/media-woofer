@@ -1,0 +1,33 @@
+html {
+  text-align: center;
+}
+
+body {
+  background-color: #ccc;
+  text-align: center;
+  color: #333;
+  width: 300px;
+}
+
+video {
+  width: 300px;
+  height: 200px;
+}
+
+#visual {
+  background-color: #000;
+  height: 200px;
+}
+
+#visual > div {
+  background-color: #F00;
+  width: 2px;
+  margin: 1px;
+  float: left;
+}
+
+#red {
+  background-color: #000;
+  width: 50px;
+  height: 50px;
+}

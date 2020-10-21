@@ -1,0 +1,37 @@
+{
+  "name": "media-woofer",
+  "version": "0.0.1",
+  "description": "Kick up the bass on your media element.",
+  "type": "module",
+  "main": "index.js",
+  "files": [
+    "./dist/*",
+    "index.js",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish-patch": "yarn run build && np patch --no-tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heff/media-woofer.git"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "keywords": [
+    "woofer",
+    "media",
+    "player",
+    "audio",
+    "video"
+  ],
+  "author": "@heff",
+  "license": "MIT",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "np": "^6.2.0"
+  }
+}
