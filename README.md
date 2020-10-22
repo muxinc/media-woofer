@@ -2,7 +2,7 @@
 
 Kick up the bass of your media element! :sound:
 
-Shakes the element and vibrates the mobile phone (Android only). Because why not?
+[Shakes the element and vibrates the mobile phone (Android only). Becuz why not?]
 
 ## Example
 
