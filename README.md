@@ -2,7 +2,9 @@
 
 Kick up the bass of your media element! :sound:
 
-[Shakes the element and vibrates the mobile phone (Android only). Becuz why not?]
+Put this tag in the page with your `<video>` or `<audio>` tag and it will _shake_ the element along with the bass (using the [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API) and [CSShake](https://elrumordelaluz.github.io/csshake/)), and also vibrate mobile phones (currently Android only) using the [Vibration API](https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API).
+
+Becuz why not? `¯\_(ツ)_/¯`
 
 ## Example
 
@@ -13,7 +15,7 @@ Kick up the bass of your media element! :sound:
 </head>
 <body>
 
-  <video src="" controls></video>
+  <video src="https://woofer.media/site/videos/pony-sample.mp4" controls></video>
   <media-woofer></media-woofer>
 
 </body>

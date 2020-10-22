@@ -5,6 +5,7 @@ cssTemplate.innerHTML = `
 `;
 document.querySelector('head').appendChild(cssTemplate.content.cloneNode(true));
 
+let WOOFER_ENABLED = false;
 
 class MediaWoofer extends HTMLElement {
   constructor() {
@@ -12,19 +13,28 @@ class MediaWoofer extends HTMLElement {
   }
 
   connectedCallback() {
-    // const playerSelector = this.getAttribute('player');
+    const mediaAttr = this.getAttribute('media');
+    const media = mediaAttr && document.querySelector(mediaAttr);
+    let medias = media ? [media] : document.querySelectorAll('audio, video');
 
-    window.addEventListener('click', ()=>{
-      if (window.wooferLoaded) {
-        return;
-      }
-      window.wooferLoaded = true;
+    const enableMedias = (evt) => {
+      if (WOOFER_ENABLED) return;
 
-      document.querySelectorAll('audio, video').forEach((el)=>{
-        this.activateMedia(el);
+      medias.forEach((media)=>{
+        this.activateMedia(media);
       });
-    });
 
+      WOOFER_ENABLED = true;
+      window.removeEventListener('click', enableMedias);
+      medias.forEach((media)=>{
+        media.removeEventListener('play', enableMedias);
+      });
+    };
+
+    window.addEventListener('click', enableMedias, false);
+    medias.forEach((media)=>{
+      media.addEventListener('play', enableMedias, false);
+    });
   }
 
   disconnectedCallback() {}
@@ -58,6 +68,7 @@ class MediaWoofer extends HTMLElement {
       }
 
       if (bass) {
+        const vibrateTime = window.MEDIA_WOOFER_VIBRATE || 100;
         media.classList.add('shake', 'shake-constant');
         window.navigator.vibrate(100);
       } else {
