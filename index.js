@@ -70,10 +70,10 @@ class MediaWoofer extends HTMLElement {
       if (bass) {
         const vibrateTime = window.MEDIA_WOOFER_VIBRATE || 100;
         media.classList.add('shake', 'shake-constant');
-        window.navigator.vibrate(100);
+        window.navigator.vibrate && window.navigator.vibrate(100);
       } else {
         media.classList.remove('shake', 'shake-constant');
-        window.navigator.vibrate(0);
+        window.navigator.vibrate && window.navigator.vibrate(0);
       }
     }
 

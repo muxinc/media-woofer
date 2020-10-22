@@ -19,7 +19,7 @@
 </head>
 <body>
 
-  <video src="site/videos/pony-sample.mp4" controls loop></video>
+  <video src="site/videos/pony-sample.mp4" controls loop preload="auto" playsinline></video>
   <media-woofer></media-woofer>
 
   <h1>&lt;media-woofer&gt;</h1>
@@ -31,16 +31,16 @@
   <p>
     <pre><code class="html">
 &lt;script type="module" src="https://unpkg.com/media-woofer"&gt;&lt;/script&gt;
-&lt;video src="https://woofer.media/site/videos/pony-sample.mp4" controls&gt;&lt;/video&gt;
+&lt;video src="https://woofer.media/site/videos/pony-sample.mp4" controls playsinline&gt;&lt;/video&gt;
 &lt;media-woofer&gt;&lt;/media-woofer&gt;
     </code></pre>
   </p>
 
-  <p>See <a href="https://github.com/muxinc/media-woofer" target="_blank">Github Repo</a> for more info.</p>
-
   <h2>One more example</h2>
 
-  <video src="site/videos/countdown-scene.mp4" controls loop class="countdown"></video>
+  <video src="site/videos/countdown-scene.mp4" controls loop preload="auto" class="countdown" playsinline></video>
   [<a href="https://www.imdb.com/title/tt0119116/" target="_blank">best movie ever</a>]
+
+  <p><p>See <a href="https://github.com/muxinc/media-woofer" target="_blank">Github Repo</a> for more info.</p></p>
 </body>
 </html>
