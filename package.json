@@ -1,6 +1,6 @@
 {
   "name": "media-woofer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kick up the bass on your media element.",
   "type": "module",
   "main": "index.js",
