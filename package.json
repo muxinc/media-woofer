@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heff/media-woofer.git"
+    "url": "git+https://github.com/muxinc/media-woofer.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
