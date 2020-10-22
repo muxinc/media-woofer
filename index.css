@@ -6,12 +6,15 @@ body {
   background-color: #ccc;
   text-align: center;
   color: #333;
-  width: 300px;
+  width: 600px;
+  margin: 30px auto;
+  font-family: Geneva, sans-serif;
+  font-size: 16px;
 }
 
 video {
-  width: 300px;
-  height: 200px;
+  width: 600px;
+  height: 600px;
 }
 
 #visual {
@@ -30,4 +33,8 @@ video {
   background-color: #000;
   width: 50px;
   height: 50px;
+}
+
+pre {
+  text-align: left;
 }

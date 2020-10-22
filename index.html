@@ -8,16 +8,32 @@
   <link rel="stylesheet" href="index.css">
   <!-- <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css"> -->
   <script type="module" src="index.js"></script>
+
+  <!-- Highlight -->
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/default.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+  <script charset="UTF-8"src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/languages/html.min.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 </head>
 <body>
 
   <video src="site/videos/pony-sample.mp4" controls loop></video>
   <media-woofer></media-woofer>
 
-  <p>&lt;media-woofer&gt;</p>
-  <p>http://woofer.media</p>
+  <h1>&lt;media-woofer&gt;</h1>
 
-  <!-- <br>
-  <video src="countdown.mp4" controls></video> -->
+  <p>Built by <a href="http://twitter.com/heff">@heff</a> &amp; <a href="https://mux.com">Mux</a> for ¯\_(ツ)_/¯</p>
+  <p>Put this tag in the page with your <code>&lt;video&gt;</code> or <code>&lt;audio&gt;</code> tag and it will <em>shake</em> the element along with the bass (using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API">Web Audio API</a> and <a href="https://elrumordelaluz.github.io/csshake/">CSShake</a>), and also vibrate mobile phones (currently Android only) using the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Vibration_API">Vibration API</a>.</p>
+
+  <h2>Example</h2>
+  <p>
+    <pre><code class="html">
+&lt;script type="module" src="https://unpkg.com/media-woofer"&gt;&lt;/script&gt;
+&lt;video src="https://woofer.media/site/videos/pony-sample.mp4" controls&gt;&lt;/video&gt;
+&lt;media-woofer&gt;&lt;/media-woofer&gt;
+    </code></pre>
+  </p>
 </body>
 </html>
